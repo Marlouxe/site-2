@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cyberfolio – TryHookMe</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/cyberfolio.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+</head>
+<body class="page-cyber">
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-cyber" id="navbar">
+    <a href="index.html" class="logo">
+      <span class="logo-hook">try</span><span class="logo-hook-accent">hook</span><span class="logo-me">me</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="boutique.html">Boutique</a></li>
+      <li><a href="cyberfolio.html" class="active">Cyberfolio</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <button class="nav-burger" id="navBurger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="cyber-layout">
+
+    <!-- SIDEBAR CYBER -->
+    <aside class="sidebar sidebar-cyber" id="sidebar">
+      <button class="sidebar-toggle" id="sidebarToggle" aria-label="Ouvrir menu">&#9776;</button>
+      <div class="sidebar-inner">
+        <h2 class="sidebar-title">&gt; Navigation_</h2>
+        <nav class="sidebar-nav">
+          <a href="#offres" class="sidebar-link active" data-section="offres">01 / Offres</a>
+          <a href="#process" class="sidebar-link" data-section="process">02 / Process</a>
+          <a href="#templates" class="sidebar-link" data-section="templates">03 / Templates</a>
+          <a href="#exemples" class="sidebar-link" data-section="exemples">04 / Exemples</a>
+        </nav>
+
+        <div class="sidebar-separator"></div>
+
+        <div class="terminal-block">
+          <span class="terminal-line"><span class="t-green">$</span> statut: <span class="t-green">disponible</span></span>
+          <span class="terminal-line"><span class="t-green">$</span> délai: <span class="t-yellow">2–3 sem.</span></span>
+          <span class="terminal-line"><span class="t-green">$</span> stack: <span class="t-cyan">HTML CSS JS</span></span>
+        </div>
+
+        <div class="sidebar-separator"></div>
+
+        <a href="contact.html?sujet=devis-cyberfolio" class="cyber-cta-btn">Démarrer un projet →</a>
+      </div>
+    </aside>
+
+    <!-- CONTENU PRINCIPAL CYBER -->
+    <main class="cyber-main">
+
+      <!-- HERO CYBER -->
+      <header class="cyber-hero">
+        <div class="cyber-hero-tag">&lt;portfolio/&gt;</div>
+        <h1 class="cyber-hero-title">Votre portfolio,<br/><em>votre identité.</em></h1>
+        <p class="cyber-hero-sub">Je crée des sites portfolios professionnels — from scratch, à partir d'un template, ou depuis votre PDF existant.</p>
+        <div class="cyber-scan-line"></div>
+      </header>
+
+      <!-- OFFRES -->
+      <section class="cyber-section" id="offres">
+        <h2 class="cyber-section-title"><span class="mono-span">&gt;</span> Formules</h2>
+        <div class="offers-grid">
+
+          <div class="offer-card">
+            <div class="offer-num">01</div>
+            <h3 class="offer-title">Portfolio sur mesure</h3>
+            <p class="offer-desc">Design unique pensé pour vous. On définit ensemble la charte graphique, la structure, les sections. Résultat : un site qui vous ressemble vraiment.</p>
+            <ul class="offer-list">
+              <li>Brief créatif complet</li>
+              <li>Maquette validée avant code</li>
+              <li>Responsive & optimisé SEO</li>
+              <li>Livraison avec fichiers sources</li>
+            </ul>
+            <a href="contact.html?sujet=devis-cyberfolio" class="offer-btn">Demander un devis</a>
+          </div>
+
+          <div class="offer-card offer-featured">
+            <div class="offer-num">02</div>
+            <div class="offer-badge-featured">Populaire</div>
+            <h3 class="offer-title">Template au choix</h3>
+            <p class="offer-desc">Choisissez parmi mes templates pré-conçus et je l'adapte avec votre contenu, vos couleurs, vos photos. Rapide et élégant.</p>
+            <ul class="offer-list">
+              <li>Sélection de templates</li>
+              <li>Personnalisation couleurs & typo</li>
+              <li>Intégration de votre contenu</li>
+              <li>Mise en ligne incluse</li>
+            </ul>
+            <a href="contact.html?sujet=devis-cyberfolio" class="offer-btn">Choisir un template</a>
+          </div>
+
+          <div class="offer-card">
+            <div class="offer-num">03</div>
+            <h3 class="offer-title">PDF → Site web</h3>
+            <p class="offer-desc">Vous avez déjà un portfolio en PDF ? Envoyez-le moi avec vos photos, je le retranscris en site web professionnel, fidèle à votre vision.</p>
+            <ul class="offer-list">
+              <li>Analyse de votre PDF</li>
+              <li>Fidélité au design d'origine</li>
+              <li>Adaptation web & mobile</li>
+              <li>Galerie photos intégrée</li>
+            </ul>
+            <a href="contact.html?sujet=devis-cyberfolio" class="offer-btn">Envoyer mon PDF</a>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- PROCESS -->
+      <section class="cyber-section" id="process">
+        <h2 class="cyber-section-title"><span class="mono-span">&gt;</span> Comment ça marche</h2>
+        <div class="process-steps">
+          <div class="process-step">
+            <div class="step-num">01</div>
+            <div class="step-content">
+              <h3>Contact & brief</h3>
+              <p>On échange par mail. Vous décrivez votre activité, vos goûts, vos exemples de référence.</p>
+            </div>
+          </div>
+          <div class="process-connector">——————</div>
+          <div class="process-step">
+            <div class="step-num">02</div>
+            <div class="step-content">
+              <h3>Devis & validation</h3>
+              <p>Je vous envoie un devis détaillé. Dès validation et acompte, le projet démarre.</p>
+            </div>
+          </div>
+          <div class="process-connector">——————</div>
+          <div class="process-step">
+            <div class="step-num">03</div>
+            <div class="step-content">
+              <h3>Création & retours</h3>
+              <p>Je code votre site. Vous validez par étapes. Deux rondes de retours incluses.</p>
+            </div>
+          </div>
+          <div class="process-connector">——————</div>
+          <div class="process-step">
+            <div class="step-num">04</div>
+            <div class="step-content">
+              <h3>Livraison</h3>
+              <p>Fichiers sources livrés. Aide à la mise en ligne sur demande.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TEMPLATES APERÇU -->
+      <section class="cyber-section" id="templates">
+        <h2 class="cyber-section-title"><span class="mono-span">&gt;</span> Templates disponibles</h2>
+        <div class="templates-grid">
+          <div class="template-card">
+            <div class="template-preview tp-minimal">
+              <div class="tp-bar"></div><div class="tp-line short"></div><div class="tp-line"></div><div class="tp-line short"></div>
+            </div>
+            <span class="template-name">Minimal</span>
+          </div>
+          <div class="template-card">
+            <div class="template-preview tp-bold">
+              <div class="tp-big-text">A</div><div class="tp-line"></div><div class="tp-line short"></div>
+            </div>
+            <span class="template-name">Editorial</span>
+          </div>
+          <div class="template-card">
+            <div class="template-preview tp-grid">
+              <div class="tp-cell"></div><div class="tp-cell"></div><div class="tp-cell tall"></div><div class="tp-cell"></div>
+            </div>
+            <span class="template-name">Galerie</span>
+          </div>
+          <div class="template-card template-card-cta">
+            <div class="template-cta-inner">
+              <span class="plus-sign">+</span>
+              <span>Votre idée</span>
+            </div>
+          </div>
+        </div>
+        <p class="templates-note">D'autres templates disponibles sur demande. Ou créons ensemble quelque chose d'unique.</p>
+      </section>
+
+      <!-- CTA FINAL -->
+      <section class="cyber-cta-section">
+        <div class="cyber-cta-inner">
+          <div class="cyber-cta-text">
+            <h2>Prêt à lancer votre projet ?</h2>
+            <p>Un simple mail suffit. Je vous réponds sous 48h.</p>
+          </div>
+          <a href="contact.html?sujet=devis-cyberfolio" class="cyber-cta-big-btn">Démarrer →</a>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <footer class="footer-inner footer-cyber">
+    <p>&copy; 2025 TryHookMe · <a href="mailto:contact@tryhookme.fr">contact@tryhookme.fr</a></p>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/cyberfolio.js"></script>
+</body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact – TryHookMe</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/contact.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+</head>
+<body class="page-contact">
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <a href="index.html" class="logo">
+      <span class="logo-hook">try</span><span class="logo-hook-accent">hook</span><span class="logo-me">me</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="boutique.html">Boutique</a></li>
+      <li><a href="cyberfolio.html">Cyberfolio</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+    <button class="nav-burger" id="navBurger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <main class="contact-page">
+
+    <!-- EN-TÊTE -->
+    <div class="contact-header">
+      <div class="contact-breadcrumb"><a href="index.html">Accueil</a> / Contact</div>
+      <h1 class="contact-title">Parlons de votre projet</h1>
+      <p class="contact-subtitle">Devis, question, personalisation — je réponds sous 48h.</p>
+    </div>
+
+    <div class="contact-layout">
+
+      <!-- FORMULAIRE -->
+      <section class="contact-form-wrap">
+        <form class="contact-form" id="contactForm" action="mailto:contact@tryhookme.fr" method="GET" enctype="text/plain">
+
+          <!-- NOM & EMAIL -->
+          <div class="form-row two-col">
+            <div class="form-group">
+              <label for="nom" class="form-label">Votre nom <span class="required">*</span></label>
+              <input type="text" id="nom" name="nom" class="form-input" placeholder="Marie Dupont" required />
+            </div>
+            <div class="form-group">
+              <label for="email" class="form-label">Votre e-mail <span class="required">*</span></label>
+              <input type="email" id="email" name="email" class="form-input" placeholder="marie@exemple.fr" required />
+            </div>
+          </div>
+
+          <!-- OBJET -->
+          <div class="form-group">
+            <label for="sujet" class="form-label">Objet de votre demande <span class="required">*</span></label>
+            <div class="select-wrap">
+              <select id="sujet" name="sujet" class="form-select" required>
+                <option value="" disabled selected>— Choisissez un objet —</option>
+                <optgroup label="Création web">
+                  <option value="devis-cyberfolio">Devis Cyberfolio (de zéro)</option>
+                  <option value="devis-template">Devis Cyberfolio (template)</option>
+                  <option value="devis-pdf">Devis Cyberfolio (depuis PDF)</option>
+                </optgroup>
+                <optgroup label="Artisanat">
+                  <option value="devis-crochet">Devis Crochet</option>
+                  <option value="devis-tricot">Devis Tricot</option>
+                  <option value="devis-broderie">Devis Broderie</option>
+                  <option value="devis-personnalisation">Personnalisation vêtement</option>
+                </optgroup>
+                <optgroup label="Autre">
+                  <option value="question">Question générale</option>
+                  <option value="autre">Autre</option>
+                </optgroup>
+              </select>
+              <span class="select-arrow">▾</span>
+            </div>
+          </div>
+
+          <!-- MESSAGE -->
+          <div class="form-group">
+            <label for="message" class="form-label">Votre message <span class="required">*</span></label>
+            <textarea id="message" name="message" class="form-textarea" rows="6" placeholder="Décrivez votre projet, vos envies, vos contraintes... Plus vous êtes précis·e, plus mon devis sera juste." required></textarea>
+            <span class="char-counter" id="charCounter">0 / 2000</span>
+          </div>
+
+          <!-- PIÈCES JOINTES -->
+          <div class="form-group">
+            <label class="form-label">Pièces jointes <span class="form-hint">(optionnel — max. 20 Mo au total)</span></label>
+            <div class="file-drop-zone" id="fileDropZone">
+              <input type="file" id="fileInput" name="fichiers" class="file-input" multiple accept=".pdf,.jpg,.jpeg,.png,.webp,.gif,.zip" />
+              <div class="file-drop-inner">
+                <div class="file-drop-icon">📎</div>
+                <p class="file-drop-text">Glissez vos fichiers ici, ou <span class="file-browse-link">parcourez</span></p>
+                <p class="file-drop-hint">PDF, images (JPG, PNG, WEBP) — max. 20 Mo</p>
+              </div>
+              <div class="file-list" id="fileList"></div>
+            </div>
+            <p class="file-warning" id="fileWarning"></p>
+          </div>
+
+          <!-- HONEYPOT anti-spam -->
+          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+
+          <!-- SUBMIT -->
+          <div class="form-submit-row">
+            <p class="form-legal">En soumettant ce formulaire, vous acceptez que vos données soient utilisées pour répondre à votre demande. Aucune revente, aucun spam.</p>
+            <button type="submit" class="submit-btn" id="submitBtn">
+              <span class="submit-label">Envoyer le message</span>
+              <span class="submit-arrow">→</span>
+            </button>
+          </div>
+
+        </form>
+
+        <!-- MESSAGE DE CONFIRMATION -->
+        <div class="form-success" id="formSuccess" style="display:none">
+          <div class="success-icon">✓</div>
+          <h2>Message envoyé !</h2>
+          <p>Merci pour votre demande. Je vous réponds sous 48h à l'adresse indiquée.</p>
+          <a href="index.html" class="back-home-btn">Retour à l'accueil</a>
+        </div>
+      </section>
+
+      <!-- PANNEAU INFOS -->
+      <aside class="contact-info">
+
+        <div class="info-card">
+          <h3 class="info-card-title">📬 Par e-mail direct</h3>
+          <a href="mailto:contact@tryhookme.fr" class="info-email">contact@tryhookme.fr</a>
+          <p class="info-note">Pour toute demande urgente ou si le formulaire ne fonctionne pas.</p>
+        </div>
+
+        <div class="info-card">
+          <h3 class="info-card-title">⏱ Délais de réponse</h3>
+          <ul class="info-list">
+            <li><strong>Devis artisanat</strong> — 24 à 48h</li>
+            <li><strong>Devis cyberfolio</strong> — 48 à 72h</li>
+            <li><strong>Questions</strong> — 24h</li>
+          </ul>
+        </div>
+
+        <div class="info-card">
+          <h3 class="info-card-title">💳 Paiement</h3>
+          <p class="info-note">Un acompte de 30 % est demandé à la validation du devis. Solde à la livraison. Paiement via Stripe (CB sécurisée) ou virement.</p>
+        </div>
+
+        <div class="info-card craft-card">
+          <h3 class="info-card-title">🧶 Artisanat</h3>
+          <p class="info-note">Précisez les couleurs, dimensions, matières souhaitées. Une photo de référence est toujours la bienvenue !</p>
+        </div>
+
+        <div class="info-card cyber-card">
+          <h3 class="info-card-title">💻 Cyberfolio</h3>
+          <p class="info-note">Joignez votre PDF existant et vos photos si vous en avez. Sinon, on part de zéro ensemble.</p>
+        </div>
+
+      </aside>
+
+    </div>
+  </main>
+
+  <footer class="footer-inner">
+    <p>&copy; 2025 TryHookMe · <a href="mailto:contact@tryhookme.fr">contact@tryhookme.fr</a></p>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/contact.js"></script>
+</body>
+</html>

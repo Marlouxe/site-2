@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Boutique – TryHookMe</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/boutique.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+</head>
+<body class="page-boutique">
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-craft" id="navbar">
+    <a href="index.html" class="logo">
+      <span class="logo-hook">try</span><span class="logo-hook-accent">hook</span><span class="logo-me">me</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="boutique.html" class="active">Boutique</a></li>
+      <li><a href="cyberfolio.html">Cyberfolio</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <button class="nav-burger" id="navBurger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="boutique-layout">
+
+    <!-- SIDEBAR GAUCHE -->
+    <aside class="sidebar sidebar-craft" id="sidebar">
+      <button class="sidebar-toggle" id="sidebarToggle" aria-label="Ouvrir menu">&#9776;</button>
+      <div class="sidebar-inner">
+        <h2 class="sidebar-title">Collections</h2>
+        <nav class="sidebar-nav">
+          <a href="#all" class="sidebar-link active" data-filter="all">✦ Tout voir</a>
+          <a href="#crochet" class="sidebar-link" data-filter="crochet">Crochet</a>
+          <a href="#tricot" class="sidebar-link" data-filter="tricot">Tricot</a>
+          <a href="#broderie" class="sidebar-link" data-filter="broderie">Broderie</a>
+          <a href="#vetements" class="sidebar-link" data-filter="vetements">Vêtements</a>
+          <a href="#decoration" class="sidebar-link" data-filter="decoration">Décoration</a>
+          <a href="#accessoires" class="sidebar-link" data-filter="accessoires">Accessoires</a>
+        </nav>
+
+        <div class="sidebar-separator"></div>
+
+        <h3 class="sidebar-section-title">Personnalisation</h3>
+        <p class="sidebar-note">Vous souhaitez une création sur mesure ?</p>
+        <a href="contact.html?sujet=devis-crochet" class="sidebar-cta-btn">Demander un devis</a>
+
+        <div class="sidebar-separator"></div>
+
+        <h3 class="sidebar-section-title">Paiement</h3>
+        <p class="sidebar-note">Paiement sécurisé via Stripe. Virement & autres moyens disponibles sur demande.</p>
+        <div class="payment-badges">
+          <span class="badge">Visa</span>
+          <span class="badge">Mastercard</span>
+          <span class="badge">Stripe</span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- CONTENU PRINCIPAL -->
+    <main class="boutique-main">
+
+      <!-- EN-TÊTE BOUTIQUE -->
+      <header class="boutique-header">
+        <div class="boutique-breadcrumb"><a href="index.html">Accueil</a> / Boutique</div>
+        <h1 class="boutique-page-title">La Boutique</h1>
+        <p class="boutique-page-sub">Créations artisanales faites main — uniques, chaleureuses, personnalisables.</p>
+      </header>
+
+      <!-- GRILLE PRODUITS -->
+      <section class="products-grid" id="productsGrid">
+
+        <!-- PRODUIT 1 -->
+        <article class="product-card" data-cat="crochet decoration">
+          <div class="product-img-wrap">
+            <img src="images/placeholder-crochet-1.jpg" alt="Suspension murale crochet" class="product-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'" />
+            <div class="product-img-placeholder" style="display:none">🧶</div>
+            <span class="product-badge">Crochet</span>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Suspension murale boho</h3>
+            <p class="product-desc">Décoration murale en macramé crocheté, tons naturels.</p>
+            <div class="product-footer">
+              <span class="product-price">À partir de 35 €</span>
+              <a href="contact.html?sujet=devis-crochet" class="product-btn">Commander / Personnaliser</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- PRODUIT 2 -->
+        <article class="product-card" data-cat="tricot vetements">
+          <div class="product-img-wrap">
+            <img src="images/placeholder-tricot-1.jpg" alt="Pull tricot" class="product-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'" />
+            <div class="product-img-placeholder" style="display:none">🧣</div>
+            <span class="product-badge badge-tricot">Tricot</span>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Pull cosy sur mesure</h3>
+            <p class="product-desc">Pull tricoté main, laine douce, coloris & taille au choix.</p>
+            <div class="product-footer">
+              <span class="product-price">À partir de 80 €</span>
+              <a href="contact.html?sujet=devis-tricot" class="product-btn">Commander / Personnaliser</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- PRODUIT 3 -->
+        <article class="product-card" data-cat="broderie decoration">
+          <div class="product-img-wrap">
+            <img src="images/placeholder-broderie-1.jpg" alt="Broderie encadrée" class="product-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'" />
+            <div class="product-img-placeholder" style="display:none">🪡</div>
+            <span class="product-badge badge-broderie">Broderie</span>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Tableau brodé personnalisé</h3>
+            <p class="product-desc">Portrait, paysage, citation — tout est possible sur tissu.</p>
+            <div class="product-footer">
+              <span class="product-price">À partir de 45 €</span>
+              <a href="contact.html?sujet=devis-broderie" class="product-btn">Commander / Personnaliser</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- PRODUIT 4 -->
+        <article class="product-card" data-cat="crochet accessoires">
+          <div class="product-img-wrap">
+            <img src="images/placeholder-crochet-2.jpg" alt="Sac crochet" class="product-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'" />
+            <div class="product-img-placeholder" style="display:none">👜</div>
+            <span class="product-badge">Crochet</span>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Sac cabas crocheté</h3>
+            <p class="product-desc">Sac tressé léger, idéal marché ou plage. Couleur au choix.</p>
+            <div class="product-footer">
+              <span class="product-price">À partir de 30 €</span>
+              <a href="contact.html?sujet=devis-crochet" class="product-btn">Commander / Personnaliser</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- PRODUIT 5 -->
+        <article class="product-card" data-cat="tricot accessoires">
+          <div class="product-img-wrap">
+            <img src="images/placeholder-tricot-2.jpg" alt="Bonnet tricot" class="product-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'" />
+            <div class="product-img-placeholder" style="display:none">🧢</div>
+            <span class="product-badge badge-tricot">Tricot</span>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Bonnet & écharpe assortis</h3>
+            <p class="product-desc">Ensemble tricoté main, douillet pour l'hiver. Personnalisable.</p>
+            <div class="product-footer">
+              <span class="product-price">À partir de 40 €</span>
+              <a href="contact.html?sujet=devis-tricot" class="product-btn">Commander / Personnaliser</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- PRODUIT 6 -->
+        <article class="product-card" data-cat="broderie accessoires vetements">
+          <div class="product-img-wrap">
+            <img src="images/placeholder-broderie-2.jpg" alt="Vêtement brodé" class="product-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'" />
+            <div class="product-img-placeholder" style="display:none">👕</div>
+            <span class="product-badge badge-broderie">Broderie</span>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Personnalisation vêtement</h3>
+            <p class="product-desc">Envoyez votre vêtement, on y brode votre motif. Unique.</p>
+            <div class="product-footer">
+              <span class="product-price">À partir de 20 €</span>
+              <a href="contact.html?sujet=devis-broderie" class="product-btn">Commander / Personnaliser</a>
+            </div>
+          </div>
+        </article>
+
+      </section>
+
+      <!-- BANNIÈRE PERSONNALISATION -->
+      <section class="custom-banner">
+        <div class="custom-banner-inner">
+          <div class="custom-banner-text">
+            <h2>Une idée en tête ?</h2>
+            <p>Toutes les créations sont personnalisables. Couleur, taille, motif, message — dites-moi tout et je vous prépare un devis.</p>
+          </div>
+          <a href="contact.html?sujet=devis-crochet" class="custom-banner-btn">Demander un devis gratuit</a>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <footer class="footer-inner footer-craft">
+    <p>&copy; 2025 TryHookMe · <a href="mailto:contact@tryhookme.fr">contact@tryhookme.fr</a></p>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/boutique.js"></script>
+</body>
+</html>
